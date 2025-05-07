@@ -96,68 +96,99 @@
         font-size: var(--ddd-spacing-8);
         overflow: hidden;
       }
-      @media (max-width: 768px) {
-        .about-content,
-        .profile-pic,
-        .norwin-pic,
-        .resume-pic,
-        .bio-text,
-        .work-text,
-        .resume-content,
-        .about-content,
-        .contact-pic,
-        .work-content,
-        .contact-wrapper {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-      @media (max-width: 425px) {
-        .about-content,
-        .profile-pic,
-        .norwin-pic,
-        .resume-pic,
-        .bio-text,
-        .work-text,
-        .resume-content,
-        .about-content,
-        .contact-pic,
-        .work-content,
-        .contact-wrapper {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-      @media (max-width: 375px) {
-        .about-content,
-        .profile-pic,
-        .norwin-pic,
-        .resume-pic,
-        .bio-text,
-        .work-text,
-        .resume-content,
-        .about-content,
-        .contact-pic,
-        .work-content,
-        .contact-wrapper {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-      @media (max-width: 320px) {
-        .about-content,
-        .profile-pic,
-        .norwin-pic,
-        .resume-pic,
-        .bio-text,
-        .work-text,
-        .resume-content,
-        .about-content,
-        .contact-pic,
-        .work-content,
-        .contact-wrapper {
-          display: flex;
-          flex-direction: column;
-        }
-      }
+      @media (max-width: 768px),
+       (max-width: 425px),
+       (max-width: 375px),
+       (max-width: 320px) {
+  .about-content,
+  .profile-pic,
+  .barrycallebaut-pic,
+  .small-pic,
+  .resume-pic,
+  .bio-text,
+  .work-text,
+  .resume-content,
+  .contact-pic,
+  .work-content,
+  .contact-wrapper,
+  .myinfo-text,
+  .resume-info,
+  .BC-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+</style>
+    <title>portfolio-very-theme</title>
+  </head>
+  <body>
+    <div>
+      <portfolio-very-header></portfolio-very-header>
+    </div>
+    <portfolio-very-theme data-accent="2" data-primary="2">
+      <portfolio-very-screen class="about" id="1" title="About">
+        <div class="about-content">
+          <img src="Noah.jpeg" alt="Noah" class=" profile-pic" />
+          <div class="bio-text"
+            <p>
+              Hello everyone my Name is Noah Chup and I am a third year majoring in ETI.
+              I am very passonate about technology and have a strong intrest in the human 
+              aspect of technology. Mostly how people interact with it and how it is 
+              improving our lives everyday. I enjoy improving technologies as well as 
+              coding from time to time. I am also very interested in AI and how far its 
+              capabilities will take us.
+            </p>
+          </div>
+        </div>
+      </portfolio-very-screen>
+      <portfolio-very-screen class="resume" id="2" title="Resume">
+        <div class="resume-content">
+          <img
+            src=""
+            alt=""
+            class="resume-pic"
+            />
+            <div class="resume-info">
+              <p>
+                As a third year here at PSU I have had the luxery of having 2 internships now 
+                with the same company. This company is Barry Callebaut, it is one of the largest 
+                chocolate manufaterurs in the world. While I worked for them over the summer I mainly helped them with 
+                their transition from SAP to IBM as well as training on IBM. I was in charge of a group of around 20 mechanics
+                and was tasked with training them on the IBM parts software. I have also done some work on 
+                the IT side for BC such as computer repairs and tech upgraded. Lastly at PSU this semster I had 
+                the pleasre of being team lead while presenting a buisness case for a risk assesment tool 
+                for Nittny Lion Natinal Bank. 
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href=" "
+                    tittle="resume"
+                    target="_blank"
+                    >
+                  View Resume
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </portfolio-very-screen>
+      <portfolio-very-screen class="projects" id="3" title="Projects">
+        <project-card
+          title="Steps List & Bowling Alley"
+          description="In this project I recreate a campus website with a formated steps list
+          as well as redisn a bowling alley website with the help of AI"
+          link=""
+          image=""
+          ></project-card>
+        </portfolio-very-screen>
+  
+        <portfolio-very-screen class="work" id="4" title="Real Work Experience">
+          <div
+
       
+
+   
+          
