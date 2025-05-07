@@ -17,6 +17,12 @@
         padding: 0;
       }
 
+      .profile-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
       .profile-pic {
         width: 450px;
         height: 450px;
@@ -134,6 +140,10 @@
   <body>
     <portfolio-very-header></portfolio-very-header>
 
+    <div class="profile-wrapper">
+      <img src="/profile.jpg" alt="Noah Chup" class="profile-pic" />
+    </div>
+
     <portfolio-very-theme data-accent="2" data-primary="2">
       <portfolio-very-screen class="about" id="1" title="About">
         <div class="about-content">
@@ -156,9 +166,7 @@
           <div class="resume-info">
             <div class="resume-header">
               <h2>Resume</h2>
-              <a href="./resume.pdf" target="_blank" class="resume-link">View PDF</a>
-                >View PDF</a
-              >
+              <a href="/resume.pdf" target="_blank">View PDF</a>
             </div>
             <p>
               As a third year here at PSU I have had the luxury of having 2
@@ -187,7 +195,7 @@
 
         <project-card
           title="Bowling Alley"
-          description="This project I recreate a bowling alley website witht he help of AI."
+          description="This project I recreate a bowling alley website with the help of AI."
           image="/Bowl.png"
           link="https://bowling-web-nine.vercel.app/"
         ></project-card>
