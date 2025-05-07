@@ -1,6 +1,6 @@
 /**
  * Copyright 2025 NoahC570
- * * @license Apache-2.0, see LICENSE for full text.
+ * @license Apache-2.0, see LICENSE for full text.
  */
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
@@ -10,6 +10,7 @@ export class PortfolioVeryTop extends DDDSuper(I18NMixin(LitElement)) {
   static get tag() {
     return "portfolio-very-header";
   }
+
   constructor() {
     super();
     this.title = "";
@@ -20,7 +21,6 @@ export class PortfolioVeryTop extends DDDSuper(I18NMixin(LitElement)) {
     };
   }
 
-  // Lit reactive properties
   static get properties() {
     return {
       ...super.properties,
@@ -28,7 +28,6 @@ export class PortfolioVeryTop extends DDDSuper(I18NMixin(LitElement)) {
     };
   }
 
-  // Lit scoped styles
   static get styles() {
     return [
       super.styles,
@@ -40,6 +39,19 @@ export class PortfolioVeryTop extends DDDSuper(I18NMixin(LitElement)) {
           font-family: var(--ddd-font-navigation);
         }
 
+        .your-banner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--ddd-theme-default-nittanyNavy);
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 100px;
+          z-index: 9999;
+        }
+
         .your-banner a {
           padding: var(--ddd-spacing-3);
           display: inline-block;
@@ -48,40 +60,24 @@ export class PortfolioVeryTop extends DDDSuper(I18NMixin(LitElement)) {
           color: var(--ddd-theme-default-white);
           text-decoration: none;
         }
-
-        .your-banner {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: var(--ddd-theme-default-nittanyNavy);
-          position: fixed;
-          top: var(--ddd-spacing-25);
-          left: var(--ddd-spacing-0);
-          height: 100px;
-          right: var(--ddd-spacing-0);
-          z-index: 1;
-        }
       `,
     ];
   }
 
-  // Lit render the HTML
   render() {
-    return html` <div class="wrapper">
-      <div class="your-banner">
-        <a href="#1">About</a>
-        <a href="#2">Resume</a>
-        <a href="#3">Projects</a>
-        <a href="#4">Work Experience</a>
-        <a href="#5">Contact</a>
+    return html`
+      <div class="wrapper">
+        <div class="your-banner">
+          <a href="#1">About</a>
+          <a href="#2">Resume</a>
+          <a href="#3">Projects</a>
+          <a href="#4">Work Experience</a>
+          <a href="#5">Contact</a>
+        </div>
+        <slot></slot>
       </div>
-      <slot></slot>
-    </div>`;
+    `;
   }
-
-  /**
-   * haxProperties integration via file reference
-   */
 }
 
 globalThis.customElements.define(PortfolioVeryTop.tag, PortfolioVeryTop);
