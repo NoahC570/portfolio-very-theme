@@ -23,18 +23,21 @@
         border-radius: 50%;
         border: 4px solid var(--ddd-theme-primary);
       }
+
       .barrycallebaut-pic {
         width: 500px;
         height: 500px;
         border-radius: 50%;
         border: 4px solid var(--ddd-theme-primary);
       }
+
       .resume-pic {
         width: 450px;
         height: 450px;
         margin-right: 20px;
         border: 4px solid var(--ddd-theme-primary);
       }
+
       .aboutme-text {
         max-width: 700px;
         text-align: left;
@@ -42,6 +45,7 @@
         font-size: var(--ddd-spacing-6);
         padding-top: 10px;
       }
+
       .experiance-text {
         max-width: 600px;
         text-align: left;
@@ -49,10 +53,11 @@
         font-size: var(--ddd-spacing-1);
         line-height: 1.6;
       }
+
       .resume-info {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         padding: var(--ddd-spacing-4);
         max-width: 1200px;
         width: 100%;
@@ -60,6 +65,7 @@
         margin-left: 20px;
         font-size: var(--ddd-spacing-6);
       }
+
       .myinfo-text {
         display: flex;
         justify-content: space-between;
@@ -68,12 +74,14 @@
         width: 100%;
         padding-top: 90px;
       }
+
       .small-pic {
         width: 300px;
         height: 300px;
         border-radius: 50%;
         border: 4px solid var(--ddd-theme-primary);
       }
+
       .BC-info {
         display: flex;
         justify-content: space-between;
@@ -83,6 +91,7 @@
         width: 100%;
         padding-top: 100px;
       }
+
       .contact-wrapper {
         display: flex;
         flex-direction: column;
@@ -94,6 +103,28 @@
         box-sizing: border-box;
         font-size: var(--ddd-spacing-8);
         overflow: hidden;
+      }
+
+      .resume-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .resume-header h2 {
+        margin: 0;
+        font-size: 2rem;
+        color: white;
+      }
+
+      .resume-link {
+        font-size: 1rem;
+        background: var(--ddd-theme-primary);
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 4px;
       }
 
       @media (max-width: 768px),
@@ -146,9 +177,15 @@
         </div>
       </portfolio-very-screen>
 
-      <portfolio-very-screen class="resume" id="2" title="Resume">
+      <portfolio-very-screen class="resume" id="2" title="">
         <div class="resume-content">
           <div class="resume-info">
+            <div class="resume-header">
+              <h2>Resume</h2>
+              <a href="/resume.pdf" target="_blank" class="resume-link"
+                >View PDF</a
+              >
+            </div>
             <p>
               As a third year here at PSU I have had the luxury of having 2
               internships now with the same company: Barry Callebaut, one of the
@@ -162,9 +199,6 @@
               presenting a business case for a risk assessment tool for Nittany
               Lion National Bank.
             </p>
-            <ul>
-              <li></li>
-            </ul>
           </div>
         </div>
       </portfolio-very-screen>
