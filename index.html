@@ -126,39 +126,13 @@
         text-decoration: none;
         border-radius: 4px;
       }
-
-      @media (max-width: 768px),
-        (max-width: 425px),
-        (max-width: 375px),
-        (max-width: 320px) {
-        .about-content,
-        .profile-pic,
-        .barrycallebaut-pic,
-        .small-pic,
-        .resume-pic,
-        .bio-text,
-        .work-text,
-        .resume-content,
-        .contact-pic,
-        .work-content,
-        .contact-wrapper,
-        .myinfo-text,
-        .resume-info,
-        .BC-info {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-      }
     </style>
+
     <title>portfolio-very-theme</title>
   </head>
 
   <body>
-    <div>
-      <portfolio-very-header></portfolio-very-header>
-    </div>
+    <portfolio-very-header></portfolio-very-header>
 
     <portfolio-very-theme data-accent="2" data-primary="2">
       <portfolio-very-screen class="about" id="1" title="About">
@@ -205,8 +179,17 @@
 
       <portfolio-very-screen class="projects" id="3" title="Projects">
         <project-card
-          title="Steps List & Bowling Alley"
-          description="In this project I recreate a campus website with a formatted steps list as well as redesign a bowling alley website with the help of AI"
+          title="Steps List "
+          description="In this project I recreate a campus website with a formatted steps list ."
+          image="/images/bowling-preview.png"
+          link="https://ddd-steps-list-cyan.vercel.app/"
+        ></project-card>
+
+        <project-card
+          title="Bowling Alley"
+          description="This project I recreate a bowling alley website witht he help of AI."
+          image="/images/net-income-preview.png"
+          link="https://bowling-web-nine.vercel.app/"
         ></project-card>
       </portfolio-very-screen>
 
@@ -231,7 +214,6 @@
       </portfolio-very-screen>
     </portfolio-very-theme>
 
-    <!-- Scripts go outside all content for clean loading -->
     <script type="module" src="./portfolio-very-theme.js"></script>
     <script type="module" src="./portfolio-very-header.js"></script>
     <script type="module" src="./portfolio-very-screen.js"></script>
